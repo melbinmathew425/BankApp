@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends 'indexhome.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form action="" method="post">
+                <h2>Transaction Page</h2>
+                {%csrf_token%}
+                {{form.as_p}}
+                <input type="submit" class="btn btn-secondary" value="Trasfer">
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%extends 'indexhome.html'%}
+{%block body_block%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form action="" method="get">
+                {{filter.form.as_p}}
+                <input type="submit" value="filter">
+            </form>
+            {% for transaction in filter.qs %}
+{{transaction.form_account_number}}
+{{transaction.to_account_number}}
+{{transaction.amount}}
+{{transaction.date}}
+{%endfor%}
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+
+{% endblock %}

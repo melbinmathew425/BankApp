@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<style>
+    body{
+    background-color: red;
+    }
+.main{
+  background-color: #a10303;
+  text-align: center;
+  justify-content: center;
+  padding: 80px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  box-shadow: 53px 6px 299px -51px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 53px 6px 299px -51px rgba(0,0,0,0.75);
+  -moz-box-shadow: 53px 6px 299px -51px rgba(0,0,0,0.75);
+  }
+    .btn1:hover{
+     background-color: #035e1e;
+     text-shadow: 2px 2px black;
+     color:#fbff00;
+    }
+    .first{
+    margin-top: 60px;
+    }
+    .mh1{
+    text-shadow: 4px 4px black;
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    color: white;
+    font-weight: 400;
+    }
+</style>
+<body>
+
+<div class="container">
+    <div class="row first"><h1 CLASS="mh1">KKM Finance</h1></div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 main">
+            <h1>login page</h1>
+         <form action="" method="post">
+                {%csrf_token%}
+
+                {{form.as_p}}
+                <input type="submit" class="btn btn-warning btn1" value="Register">
+         </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
