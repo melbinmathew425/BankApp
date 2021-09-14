@@ -1,22 +1,82 @@
 <!DOCTYPE html>
 {%extends 'indexhome.html'%}
 {%block body_block%}
-<div>
-     <h2>Credit Transactions</h2>
-    {%for transaction in ctransactions%}
-    {{transaction.from_account_number}}
-    {{transaction.amount}}
-    {{transaction.notes}}
 
-    {%endfor%}
-</div>
-<div>
-    <h2>Debit Transactions</h2>
-    {%for transaction in dtransactions%}
-    {{transaction.from_account_number}}
-    {{transaction.amount}}
-    {{transaction.notes}}
 
-    {%endfor%}
-</div>
+ <div class="container-fluid">
+        <div class="row">
+            <h2>Credit Transactions</h2>
+            {%for transaction in ctransactions%}
+            <table class="table">
+            <tr>
+                <th>From A/C No.</th>
+                <th>Amount</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>{{transaction.from_account_number}}</td>
+                <td>{{transaction.amount}}</td>
+                <td>{{transaction.notes}}</td>
+
+            </tr>
+            {%endfor%}
+
+            </table>
+
+        </div>
+
+        <div class="row">
+            <h2>Debit Transactions</h2>
+            {%for transaction in dtransactions%}
+            <table class="table">
+            <tr>
+                <th>To A/C No.</th>
+                <th>Amount</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>{{transaction.from_account_number}}</td>
+                <td>{{transaction.amount}}</td>
+                <td>{{transaction.notes}}</td>
+
+            </tr>
+            {%endfor%}
+
+            </table>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+<!--<div>-->
+<!--     <h2>Credit Transactions</h2>-->
+<!--    {%for transaction in ctransactions%}-->
+<!--    {{transaction.from_account_number}}-->
+<!--    {{transaction.amount}}-->
+<!--    {{transaction.notes}}-->
+
+<!--    {%endfor%}-->
+<!--</div>-->
+<!--<div>-->
+<!--    <h2>Debit Transactions</h2>-->
+<!--    {%for transaction in dtransactions%}-->
+<!--    {{transaction.from_account_number}}-->
+<!--    {{transaction.amount}}-->
+<!--    {{transaction.notes}}-->
+
+<!--    {%endfor%}-->
+<!--</div>-->
 {% endblock %}

@@ -18,11 +18,11 @@
 <style>
 
 </style>
-<body>
+<body style="background-color: rgb(253, 91, 91);">
 <div class="d-flex" id="wrapper">
 
-    <div class="border-end bg-white" id="sidebar-wrapper">
-        <div class="sidebar-heading border-bottom bg-light">Account Balance</div>
+    <div class="border-end " style="background-color: #a10303;" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom " style="background-color: #a10303;color:white">Account Balance</div>
         <div class="list-group list-group-flush">
             <a class="nav-link btn " href="{% url 'balance' %}">Click Here.</a>
             <div class="container-fluid">
@@ -34,20 +34,20 @@
     </div>
 
     <!-- Page content wrapper-->
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" >
         <!-- Top navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <div class="container-fluid   nv1">
-                <button class="btn btn-primary" id="sidebarToggle">Balance Enquiry</button>
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom " style="background-color: #a10303;" >
+            <div class="container-fluid">
+                <button class=" btn btn-warning " id="sidebarToggle">Balance Enquiry</button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item active"><a class="nav-link bt1" href="{%url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link " href="{%url 'index' %}" style="color:white;">Home</a></li>
 
-                        <li class="nav-item"><a class="nav-link btn " href="{%url 'transfer' %}">Fund Transfer</a></li>
-                        <li class="nav-item"><a class="nav-link btn " href="{%url 'history' %}">History</a></li>
-                        <li class="nav-item"><a class="nav-link btn " href="{%url 'filter' %}">Search</a></li>
-                        <li class="nav-item"><a class="nav-link btn " href="{%url 'signout' %}">{{request.user}} Log Out</a></li>
+                        <li class="nav-item"><a class="nav-link btn " href="{%url 'transfer' %}" style="color:white;">Fund Transfer</a></li>
+                        <li class="nav-item"><a class="nav-link btn " href="{%url 'history' %}" style="color:white;"> History</a></li>
+                        <li class="nav-item"><a class="nav-link btn " href="{%url 'filter' %}" style="color:white;">Search</a></li>
+                        <li class="nav-item"><a class="nav-link btn " href="{%url 'signout' %}" style="color:white;"><span style="color:Black;">  {{request.user}}  </span>   Log Out</a></li>
                     </ul>
                 </div>
             </div>

@@ -34,7 +34,7 @@ class SigninView(TemplateView):
             if user:
                 print("success")
                 login(request,user)
-                return redirect("home")
+                return redirect("index")
             else:
                 print("failed")
             return render(request,self.template_name,self.context)
@@ -89,7 +89,7 @@ class FundTransferView(TemplateView,GetUserAccountMixin):
             user=self.get_user_account(taccount_number)
             user.balance+=amnt
             user.save()
-            return redirect("home")
+            return redirect("index")
         else:
             form = self.form_class(request.POST)
             self.context["form"] = form

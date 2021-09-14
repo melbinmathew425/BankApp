@@ -1,0 +1,30 @@
+body{
+    background-color: red;
+    }
+.main{
+  background-color: #a10303;
+  text-align: center;
+  justify-content: center;
+  padding: 80px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  box-shadow: 53px 6px 299px -51px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 53px 6px 299px -51px rgba(0,0,0,0.75);
+  -moz-box-shadow: 53px 6px 299px -51px rgba(0,0,0,0.75);
+  }
+    .btn1:hover{
+     background-color: #035e1e;
+     text-shadow: 2px 2px black;
+     color:#fbff00;
+    }
+    .first{
+    margin-top: 60px;
+    }
+    .mh1{
+    text-shadow: 4px 4px black;
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    color: white;
+    font-weight: 400;
+    }

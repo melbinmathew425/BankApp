@@ -15,11 +15,26 @@ class AccountCreationForm(UserCreationForm):
         model=MyUser
         fields=["first_name","username","email","password1","password2",
                 "account_number","account_type","phone","balance"]
+        widgets={
+            "first_name":forms.TextInput(attrs={"class":"form-control form-label"}),
+            "username": forms.TextInput(attrs={"class": "form-control form-label"}),
+            "email": forms.EmailInput(attrs={"class": "form-control form-label"}),
+            "password1": forms.PasswordInput(attrs={"class": "form-control form-label"}),
+            "password2": forms.PasswordInput(attrs={"class": "form-control form-label"}),
+            "account_number": forms.TextInput(attrs={"class": "form-control form-label"}),
+            "account_type": forms.Select(attrs={"class": "form-control form-label"}),
+            "phone": forms.TextInput(attrs={"class": "form-control form-label"}),
+            "balance": forms.TextInput(attrs={"class": "form-control form-label"}),
+        }
+    def __init__(self,*args,**kwargs):
+        super(AccountCreationForm,self).__init__(*args,**kwargs)
+        for fieldname in ['username','password1','password2']:
+            self.fields[fieldname].help_text = None
 
 
 class LoginForm(forms.Form):
-    username=forms.CharField()
-    password=forms.CharField(widget=forms.PasswordInput)
+    username=forms.CharField(widget=forms.TextInput(attrs={"class": "form-control","placeholder": "Enter User name"}))
+    password=forms.CharField(widget=forms.PasswordInput(attrs={"class": "form-control","placeholder": "Enter Password"}))
 
 class TransactionForm(forms.Form,GetUserAccountMixin):
     from_account_number=forms.CharField(max_length=16,widget=forms.TextInput(attrs={"class": "form-control"}))
